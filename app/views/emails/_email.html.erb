@@ -7,9 +7,9 @@
       <%= link_to "Cacher l'email", email_path(email), data: {turbo_frame: "email"}, :method => :show %>
     <%end%>
     <%if !email.alreadyopened%>
-    (Non lu)
+      (Non lu)
     <%else%>
-    (Lu)
+      (Lu)
     <%end%>
   </td>
   <td><%= button_to "Supprimer", email_path(email), data: {turbo_frame: "email"}, :method => :delete %></td>
