@@ -1,0 +1,21 @@
+  <center>
+    <br>
+    <%=button_to "Recevoir un email", emails_path, data:{turbo_frame: "email"}%>
+    <br>
+    <%=button_to "Vider la boite mail", email_path("destroy_all"), data:{turbo_frame: "email"}, :method => :delete %>
+    <br>
+  </center>
+
+  <%= turbo_frame_tag "email" do %>
+  
+    <div class = "mailbox">
+      <table>
+        <th colspan = "3">Emails</th>
+        <%@emails.sort.reverse_each do |email|%>
+          <%=render 'email', email: email%>
+          <%=render 'mailcontent', email: email%>
+        <%end%>
+      </table>
+    </div>    
+
+  <%end%>

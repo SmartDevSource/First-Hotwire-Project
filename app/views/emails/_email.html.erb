@@ -1,0 +1,11 @@
+<tr>
+  <td><%= email.object %></td>
+  <td>
+    <%if !email.isopen%>
+      <%= link_to "Afficher l'email", email_path(email), data: {turbo_frame: "email"}, :method => :show %>
+    <%else%>
+      <%= link_to "Cacher l'email", email_path(email), data: {turbo_frame: "email"}, :method => :show %>
+    <%end%>
+  </td>
+  <td><%= button_to "Supprimer", email_path(email), data: {turbo_frame: "email"}, :method => :delete %></td>
+</tr>

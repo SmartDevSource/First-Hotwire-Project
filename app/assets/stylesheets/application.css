@@ -1,15 +1,40 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+table, td{
+  border: 1px solid  rgb(51, 51, 51);
+  margin: 20px;
+}
+
+th{
+  color: white;
+  background-color: rgb(51, 51, 51);
+}
+
+td{
+  padding: 5px;
+}
+
+.mail-container{
+  position: absolute;
+  border: 3px solid #888888;
+  margin-left: 550px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-container{
+  display: inline-block;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(74, 149, 247);
+}
+
+a:hover{
+  color:rgb(6, 72, 160);
+}
+
+h1{
+  color:rgb(75, 74, 74);
+}
