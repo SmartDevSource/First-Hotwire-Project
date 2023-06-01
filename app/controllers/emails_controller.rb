@@ -5,7 +5,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    email = Email.new(object: Faker::Internet.email, body: Faker::Lorem.paragraph, isopen: false)
+    email = Email.new(object: Faker::Internet.email, body: Faker::Lorem.paragraph, isopen: false, alreadyopened: false)
 
     if email.save
       redirect_to emails_path
@@ -27,7 +27,7 @@ class EmailsController < ApplicationController
 
     if (!@email.isopen)
       Email.all.update(isopen: false)
-      @email.update(isopen: true)
+      @email.update(isopen: true, alreadyopened: true)
       redirect_to emails_path
     elsif (@email.isopen)
       @email.update(isopen: false)
